@@ -4,6 +4,7 @@ var screenHeight = 432
 function setup() {
     createCanvas(screenWidth, screenHeight)
     mario = new Mario(width/2,height/2)
+    background(0)
 
 }
 
@@ -11,8 +12,7 @@ var mario
 
 function setMarioLevel() {
     strokeWeight (10)
-    fill (0,100,190)
-    //noFill ()
+    noFill ()
     rect (0,0, width, height)
     
 }
@@ -22,12 +22,13 @@ function checkBoundary() {
 }
 
 function draw() {
+
     
    // checkBoundary()
-    //setMarioLevel()
+    setMarioLevel()
     mario.loadSprite(0)
-    img = loadImage('sprites/jump.bmp')
-    image(img,width/2,height/2)
 
+    
+    
 }
 

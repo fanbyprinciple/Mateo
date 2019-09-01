@@ -5,8 +5,15 @@ class Mario {
 
     loadSprite(imgCode) {
         let imgSource = ['sprites/jump.bmp','sprites/lose.bmp','sprites/run.bmp','sprites/stand.bmp']
-        this.currentImage = loadImage(imgSource[imgCode])
-        image(this.currentImage, this.position.x,this.position.y)
+        let path = str(imgSource[imgCode])
+        console.log(path)
+        console.log(typeof(path))
+        loadImage("sprites/jump.bmp", img=> {
+            image(img, img,this.position.y)
+            console.log("image")
+          });
+
+        
     }
 
 
